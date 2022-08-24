@@ -1,0 +1,65 @@
+// variables 
+$morado: #323150;
+$gris: #f2f2f2;
+
+// herencia 
+%centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+.main-container {
+    background-color: $morado;
+    height: 100vh;
+    color: white;
+
+    .container {
+        height: inherit;
+    }
+}
+
+main {
+
+    @extend %centrar;
+    flex-direction: column;  
+    height: 100%;
+
+    .profile {
+      
+        @extend %centrar;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+      
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+section {
+    background-color: $gris;    
+}
+
+footer {
+    height: 200px;
+    background-color: $morado;
+}
+
+.a > div {
+    height: 100px;
+}
