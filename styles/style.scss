@@ -3,6 +3,13 @@ $morado: #323150;
 $gris: #a79e9e;
 $celeste: #e0ebf0;
 
+$amarillo: #ffd117;
+$naranja: #ffaa17;
+$rojo: #f77f63;
+$azul: #7bb3d0;
+$verde: 
+#bbd07b;
+
 // herencia 
 %centrar {
     display: flex;
@@ -73,6 +80,21 @@ nav {
 
     background: url(./../images/banner.png) no-repeat scroll 0% 0% / cover;;
     height: 16rem;
+    @extend %centrar;
+    justify-content: start;
+
+    .container {
+        color:  white;
+
+        .input-group {
+            width: 50%;
+        }
+
+        h1, p, div {
+            margin-left: 2rem;
+        }
+    }
+
 }
 
 main {
@@ -112,7 +134,13 @@ footer {
     gap: 1rem;
 
     .card {
-        margin: 1rem 0 1rem 0;;
+        margin: 1rem 0 1rem 0;
+        border: none;
+
+        .card-body {
+            margin-top: 1rem;
+            padding: 0;
+        }
     }
 }
 
@@ -144,6 +172,15 @@ footer {
     }
 }
 
+
+
+
+// post section
+.post-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
 
 
 

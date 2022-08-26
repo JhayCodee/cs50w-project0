@@ -1,4 +1,4 @@
-footer .container .menu ul, nav .menu ul, .logo {
+footer .container .menu ul, .banner, nav .menu ul, .logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,6 +42,16 @@ nav .menu ul li {
 .banner {
   background: url(./../images/banner.png) no-repeat scroll 0% 0%/cover;
   height: 16rem;
+  justify-content: start;
+}
+.banner .container {
+  color: white;
+}
+.banner .container .input-group {
+  width: 50%;
+}
+.banner .container h1, .banner .container p, .banner .container div {
+  margin-left: 2rem;
 }
 
 main {
@@ -72,6 +82,11 @@ footer .container .menu ul li {
 }
 .card-container .card {
   margin: 1rem 0 1rem 0;
+  border: none;
+}
+.card-container .card .card-body {
+  margin-top: 1rem;
+  padding: 0;
 }
 
 .ads {
@@ -95,6 +110,12 @@ footer .container .menu ul li {
 .aside ul li:nth-child(5) {
   height: 12rem;
   border: none;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 
 @media (max-width: 992px) {
