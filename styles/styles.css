@@ -1,4 +1,4 @@
-main .profile, main {
+footer .container .menu ul, nav .menu ul, .logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,41 +10,87 @@ main .profile, main {
   box-sizing: border-box;
 }
 
-.main-container {
-  background-color: #323150;
-  height: 100vh;
-  color: white;
+.rainbow {
+  background: linear-gradient(to right, #323150, #f2f2f2);
+  height: 8px;
+  background-size: 200% auto;
+  animation: rainbow 10s ease infinite;
 }
-.main-container .container {
-  height: inherit;
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+nav .brand > a {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+nav .menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav .menu ul li {
+  margin: 0 1rem 0 1rem;
+}
+
+.banner {
+  background: url(./../images/banner.png) no-repeat scroll 0% 0%/cover;
+  height: 14rem;
 }
 
 main {
-  flex-direction: column;
-  height: 100%;
-}
-main .profile {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-}
-main .profile img {
-  width: 100%;
-  height: 100%;
-}
-
-section {
-  background-color: #f2f2f2;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 footer {
-  height: 200px;
   background-color: #323150;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+}
+footer .container .menu ul {
+  list-style: none;
+  color: white;
+}
+footer .container .menu ul li {
+  margin: 0 1rem 0 1rem;
 }
 
-.a > div {
-  height: 100px;
+.col-6 {
+  margin: 0 auto;
+}
+
+.ads {
+  height: 100%;
+}
+
+.card {
+  width: 18rem;
+}
+
+@media (max-width: 992px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav .brand > a {
+    display: none;
+  }
+  nav .menu {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  }
+  nav .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .banner {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
