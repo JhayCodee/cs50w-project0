@@ -95,7 +95,7 @@ footer {
         @extend %centrar;
         flex-direction: column;
         padding: 1rem;
-
+        text-align: center;
     }
 
     .socialmedia a { 
@@ -127,6 +127,15 @@ footer {
         );
     height: 8px;
     background-size: 200% auto;
+}
+
+.btn-azul {
+    background-color: $azul;
+    color: white;
+    &:hover {
+        background-color: $azul;
+        color : white;
+    }
 }
 
 .logo {
@@ -186,6 +195,13 @@ footer {
     gap: 1rem;
 
     .card {
+        
+        img {
+            width: 100%;
+            height: 15vw;
+            object-fit: cover
+        }
+
         margin: 1rem 0 1rem 0;
         border: none;
 
@@ -224,9 +240,26 @@ footer {
         & > .card {
             border: none;
             margin-bottom: 2rem;
+            
+            img {
+                width: 100%;
+                height: 15vw;
+                object-fit: cover;
+            }
         }
     }
 }
+
+// contact section
+#contact-container {
+    .form {
+
+        input[type=email]{
+            color: $azul;
+        }
+    }
+}
+
 
 
 // mediaqueries
@@ -252,6 +285,14 @@ footer {
         }
     }
 
+    .card-container {
+        .card {
+            img {
+                height: 25vw;
+            }
+        }
+    }
+
     .banner {
         display: none;
     }
@@ -264,6 +305,10 @@ footer {
     
         .card {
             width: 16rem !important;
+
+            img {
+                height: 20vh;
+            }
         }
     }
 
