@@ -35,12 +35,14 @@ $verde: #bbd07b;
     Estilos generales de todo el blog
 */
 
+//  selector universale
 * {
-    @extend %spacing-0;
+    @extend %spacing-0; //hereda de spacing-0
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
 
+// selectores de tipo etiqueta
 header {
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
@@ -50,7 +52,7 @@ nav {
     justify-content: space-around;
     align-items: center;
 
-    .brand > a {
+    .brand > a { // selector hijo
         font-size: 1.7rem;
         font-weight: bold;
         margin: .2rem;
@@ -61,7 +63,7 @@ nav {
         }
     }
 
-    .menu {
+    .menu { // selector de clase
         ul {
             padding: 0;
             margin: 0;
@@ -108,7 +110,7 @@ footer {
         margin-right: 1rem;
         font-size: 2rem;
 
-        &:hover {
+        &:hover { // selector padre
             color: $morado;
         }
     }
@@ -136,7 +138,7 @@ footer {
 .btn-azul {
     background-color: $azul;
     color: white;
-    &:hover {
+    &:hover { //pseudoclase
         background-color: $azul;
         color : white;
     }
@@ -184,7 +186,7 @@ footer {
             height: 8rem;
         }
 
-        li:nth-child(5) {
+        li:nth-child(5) { //pseudo clase
             height: 12rem;
             border: none;
         }
@@ -216,6 +218,7 @@ footer {
     }
 }
 
+//selectores de id
 
 // post section
 #post-container {
@@ -259,7 +262,7 @@ footer {
 #contact-container {
     .form {
 
-        input[type=email]{
+        input[type=email]{ // selector de atributo
             color: $azul;
         }
     }
@@ -268,6 +271,8 @@ footer {
 
 
 // mediaqueries
+
+// cambios para pantallas con un maximo de 992px
 @media (max-width: 992px) {
     
     nav {
@@ -305,6 +310,7 @@ footer {
     
 }
 
+// cambios para pantallas con un maximo de 576px
 @media (max-width: 576px) { 
     .card-container {
         grid-template-columns: repeat(1, 1fr);
