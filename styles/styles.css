@@ -179,11 +179,12 @@ footer .socialmedia a:hover {
 #about-container .team > .card {
   border: none;
   margin-bottom: 2rem;
+  text-align: center;
 }
 #about-container .team > .card img {
   width: 100%;
   height: 15vw;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 #contact-container .form input[type=email] {
@@ -226,6 +227,9 @@ footer .socialmedia a:hover {
   }
   #about-container .team {
     grid-template-columns: 1fr;
+  }
+  #about-container .team > .card img {
+    height: 50vw;
   }
 }
 
